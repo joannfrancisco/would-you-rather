@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/would-you-rather/static/css/main.693aabfd.css",
+    "main.js": "/would-you-rather/static/js/main.3f4e5b5b.js",
+    "static/js/453.65147e82.chunk.js": "/would-you-rather/static/js/453.65147e82.chunk.js",
+    "index.html": "/would-you-rather/index.html",
+    "main.693aabfd.css.map": "/would-you-rather/static/css/main.693aabfd.css.map",
+    "main.3f4e5b5b.js.map": "/would-you-rather/static/js/main.3f4e5b5b.js.map",
+    "453.65147e82.chunk.js.map": "/would-you-rather/static/js/453.65147e82.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.693aabfd.css",
+    "static/js/main.3f4e5b5b.js"
+  ]
+}

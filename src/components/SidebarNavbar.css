@@ -1,0 +1,95 @@
+/* Sidebar (hidden by default, only shows when hamburger is clicked) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 100%;
+  background: #222;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;     
+  justify-content: flex-start;   
+  gap: 1rem;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); 
+  z-index: 1000;
+}
+
+
+.sidebar.show {
+  transform: translateX(0); 
+}
+
+/* Base hamburger container */
+.hamburger {
+  width: 35px;
+  height: 30px;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1100;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+/* Hamburger bars */
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
+  left: 0;
+  transition: 0.25s ease-in-out;
+}
+
+/* Line positions */
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+.hamburger span:nth-child(2),
+.hamburger span:nth-child(3) {
+  top: 12px;
+}
+.hamburger span:nth-child(4) {
+  top: 24px;
+}
+
+/* Open state */
+.hamburger.open span:nth-child(1) {
+  top: 12px;
+  width: 0%;
+  left: 50%;
+}
+.hamburger.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.hamburger.open span:nth-child(4) {
+  top: 12px;
+  width: 0%;
+  left: 50%;
+}
+
+/* Welcome text */
+.welcome {
+  margin: 0 auto;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  padding-bottom: 2rem;
+}
+
+/* 🔑 Responsive: full-screen sidebar in mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;   
+    align-items: center; 
+    padding: 2rem;
+  }
+}

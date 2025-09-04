@@ -1,0 +1,61 @@
+.bubbles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  perspective: 1000px;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+}
+
+.bubble {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), rgba(255,255,255,0.05));
+  border-radius: 50%;
+  animation: floatFade linear infinite;
+  opacity: 0.4;
+  mix-blend-mode: screen;
+}
+
+/* Different sizes and colors */
+.bubble:nth-child(3n) {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,0,150,0.25), rgba(255,0,150,0.05));
+}
+.bubble:nth-child(4n) {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 30% 30%, rgba(0,200,255,0.25), rgba(0,200,255,0.05));
+}
+.bubble:nth-child(5n) {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, rgba(0,255,150,0.25), rgba(0,255,150,0.05));
+}
+
+/* Floating + fading animation */
+@keyframes floatFade {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate3d(-30px, -40px, 50px) scale(1.2);
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate3d(50px, -80px, -50px) scale(1);
+    opacity: 0;
+  }
+}
